@@ -23,9 +23,7 @@ class LinkedList:  # create LinkedList
         return True
 
     def pop(self):
-        if (
-            self.length == 0
-        ):  # Return None when the list is empty because there is no node to remove.
+        if self.length == 0: # Return None when the list is empty because there is no node to remove.
             return None
 
         temp = self.head
