@@ -21,7 +21,6 @@ class LinkedList:
             self.tail = New_node
         self.length += 1
         return True
-    
 
     def Print_lines(self):
         temp = self.head
