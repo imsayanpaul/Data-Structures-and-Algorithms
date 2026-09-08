@@ -16,6 +16,7 @@
 # Tail: 30
 # Length: 4
 
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -29,6 +30,13 @@ class LinkedList:
         self.head = new_node
         self.tail = new_node
         self.length = 1
+
+
+def print_list(self):
+    temp = self.head
+    while temp is not None:
+        print(temp.value)
+        temp = temp.next
 
 
 # Create linked list with first value
@@ -47,6 +55,8 @@ my_linked_list.tail = node4
 
 my_linked_list.length = 4
 
-print('Head is', my_linked_list.head.value)
-print('Tail is', my_linked_list.tail.value)
-print('Length is', my_linked_list.length)
+print("Head is", my_linked_list.head.value)
+print("Tail is", my_linked_list.tail.value)
+print("Length is", my_linked_list.length)
+
+print_list(my_linked_list)
