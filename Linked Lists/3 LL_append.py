@@ -13,7 +13,7 @@ class LinkedList:
 
     def append(self, value):
         New_node = Node(value)
-        if self.head is None:
+        if self.length == 0:
             self.head = New_node
             self.tail = New_node
         else:
@@ -21,6 +21,7 @@ class LinkedList:
             self.tail = New_node
         self.length += 1
         return True
+    
 
     def Print_lines(self):
         temp = self.head
