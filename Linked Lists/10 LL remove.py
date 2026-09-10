@@ -100,6 +100,20 @@ class LinkedList:
         self.length += 1
         return True
 
+    def remove(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        if index == self.length - 1:
+            return self.pop()
+        pre = self.get(index - 1)
+        temp = pre.next
+        pre.next = temp.next
+        temp.next = None
+        self.length -= 1
+        return temp
+
 
 New_linked_list = LinkedList(10)
 New_linked_list.append(20)
@@ -108,7 +122,8 @@ New_linked_list.prepend(55)
 # New_linked_list.pop()
 # pop_var = New_linked_list.pop_first()
 # print(New_linked_list.get(0).value)
-# New_linked_list.set_value(0, 99)
+New_linked_list.set_value(0, 99)
 New_linked_list.insert(2, 200)
+New_linked_list.remove(2)
 New_linked_list.print_List()
 print("Length:", New_linked_list.length)
