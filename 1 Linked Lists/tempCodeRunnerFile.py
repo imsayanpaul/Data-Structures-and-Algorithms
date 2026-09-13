@@ -1,0 +1,1 @@
+print('Length:', my_linked_list.length)
